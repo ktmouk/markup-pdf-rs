@@ -1,0 +1,25 @@
+<Document title="recipe">
+  <Page style="page">
+    <Layer style="main">
+      <Text style="title">肉じゃが</Text>
+      <Text style="description">日本の家庭でおなじみの肉じゃが。肉やじゃがいも、玉ねぎを油で炒めてから、醤油やみりんで甘煮にします。ごはんのおかずに最適です。</Text>
+      <Layer style="summary">
+        <Image style="photo" src="food" />
+        <Layer style="ingredients">
+          <Text style="summary-title">材料（2人前）</Text>
+          <Text style="ingredient">豚肉 ... 200g</Text>
+          <Text style="ingredient">じゃがいも ... 3個</Text>
+          <Text style="ingredient">玉ねぎ ... 1個</Text>
+          <Text style="ingredient">砂糖、醤油 ... おおさじ2</Text>
+          <Text style="ingredient">水 ... 200ml</Text>
+        </Layer>
+      </Layer>
+      <Layer style="steps">
+        <Text style="step">1. にんじんとじゃがいもは乱切りに、玉ねぎは串切りにします。</Text>
+        <Text style="step">2. 鍋に油を加えて豚肉を炒めます。豚肉がさっと炒まったらにんじんとじゃがいも、玉ねぎを加えて炒めます。全体に火が通ったら水と砂糖を加えます。</Text>
+        <Text style="step">3. 調味料を加えた後、落し蓋をして数十分間煮込みます。</Text>
+        <Text style="last-step">4. 汁気が無くなったら味見をして、味が染み込んでいるのを確認した後、お皿に盛り付けをして完成です。</Text>
+      </Layer>
+    </Layer>
+  </Page>
+</Document>

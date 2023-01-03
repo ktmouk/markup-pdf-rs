@@ -1,0 +1,154 @@
+<Document title="resume">
+  <Page style="page">
+    <Layer style="main">
+      <Layer style="header">
+        <Text style="title">履歴書</Text>
+        <Text style="date">年        月        日</Text>
+      </Layer>
+      <Layer style="profile">
+        <Layer style="profile-form">
+          <Layer style="label">
+            <Text style="label-text">ふりがな</Text>
+          </Layer>
+          <Layer style="input">
+            <Text style="input-text">氏名</Text>
+          </Layer>
+          <Layer style="birthdate-input">
+            <Text style="input-text">年        月        日生（満　  歳）</Text>
+          </Layer>
+          <Layer style="input">
+            <Text style="input-text">現住所　〒          -          TEL</Text>
+          </Layer>
+        </Layer>
+        <Layer style="photo">
+          <Text style="photo-text">写真を貼る位置。縦 36～40mm、横 24～30mm</Text>
+        </Layer>
+      </Layer>
+      <Layer style="table">
+        <Layer style="table-header">
+          <Text style="table-date">年</Text>
+          <Text style="table-date">月</Text>
+          <Text style="table-detail">学歴・職歴</Text>
+        </Layer>
+        <Layer style="table-body">
+          <Layer style="table-date" />
+          <Layer style="table-date" />
+          <Layer style="table-detail" />
+        </Layer>
+        <Layer style="table-body">
+          <Layer style="table-date" />
+          <Layer style="table-date" />
+          <Layer style="table-detail" />
+        </Layer>
+        <Layer style="table-body">
+          <Layer style="table-date" />
+          <Layer style="table-date" />
+          <Layer style="table-detail" />
+        </Layer>
+        <Layer style="table-body">
+          <Layer style="table-date" />
+          <Layer style="table-date" />
+          <Layer style="table-detail" />
+        </Layer>
+        <Layer style="table-body">
+          <Layer style="table-date" />
+          <Layer style="table-date" />
+          <Layer style="table-detail" />
+        </Layer>
+        <Layer style="table-body">
+          <Layer style="table-date" />
+          <Layer style="table-date" />
+          <Layer style="table-detail" />
+        </Layer>
+        <Layer style="table-body">
+          <Layer style="table-date" />
+          <Layer style="table-date" />
+          <Layer style="table-detail" />
+        </Layer>
+        <Layer style="table-body">
+          <Layer style="table-date" />
+          <Layer style="table-date" />
+          <Layer style="table-detail" />
+        </Layer>
+        <Layer style="table-body">
+          <Layer style="table-date" />
+          <Layer style="table-date" />
+          <Layer style="table-detail" />
+        </Layer>
+        <Layer style="table-body">
+          <Layer style="table-date" />
+          <Layer style="table-date" />
+          <Layer style="table-detail" />
+        </Layer>
+        <Layer style="table-body">
+          <Layer style="table-date" />
+          <Layer style="table-date" />
+          <Layer style="table-detail" />
+        </Layer>
+        <Layer style="table-body">
+          <Layer style="table-date" />
+          <Layer style="table-date" />
+          <Layer style="table-detail" />
+        </Layer>
+      </Layer>
+    </Layer>
+  </Page>
+
+  <Page style="page">
+    <Layer style="main">
+      <Layer style="table">
+        <Layer style="table-header">
+          <Text style="table-date">年</Text>
+          <Text style="table-date">月</Text>
+          <Text style="table-detail">免許・資格</Text>
+        </Layer>
+        <Layer style="table-body">
+          <Layer style="table-date" />
+          <Layer style="table-date" />
+          <Layer style="table-detail" />
+        </Layer>
+        <Layer style="table-body">
+          <Layer style="table-date" />
+          <Layer style="table-date" />
+          <Layer style="table-detail" />
+        </Layer>
+        <Layer style="table-body">
+          <Layer style="table-date" />
+          <Layer style="table-date" />
+          <Layer style="table-detail" />
+        </Layer>
+        <Layer style="table-body">
+          <Layer style="table-date" />
+          <Layer style="table-date" />
+          <Layer style="table-detail" />
+        </Layer>
+        <Layer style="table-body">
+          <Layer style="table-date" />
+          <Layer style="table-date" />
+          <Layer style="table-detail" />
+        </Layer>
+        <Layer style="table-body">
+          <Layer style="table-date" />
+          <Layer style="table-date" />
+          <Layer style="table-detail" />
+        </Layer>
+      </Layer>
+      <Layer style="table">
+        <Layer style="table-header">
+          <Text style="table-detail">志望動機、アピールポイントなど</Text>
+        </Layer>
+        <Layer style="table-body">
+          <Layer style="table-detail" />
+        </Layer>
+      </Layer>
+      <Layer style="table">
+        <Layer style="table-header">
+          <Text style="table-detail">本人希望記入欄</Text>
+        </Layer>
+        <Layer style="table-body">
+          <Layer style="table-detail" />
+        </Layer>
+      </Layer>
+    </Layer>
+  </Page>
+</Document>

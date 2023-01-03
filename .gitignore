@@ -1,0 +1,6 @@
+/target
+/dist/*
+!/dist/.keep
+/examples/assets/fonts/*
+!/examples/assets/fonts/install.sh
+.DS_Store
