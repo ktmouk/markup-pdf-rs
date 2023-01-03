@@ -1,18 +1,4 @@
-# markup-pdf-rs
-
-The Rust library for making a PDF files by writing kind of HTML/CSS.
-Inspired by [Satori](https://github.com/vercel/satori) and [React-pdf](https://react-pdf.org/). 
-This library makes a PDF file with [taffy](https://github.com/DioxusLabs/taffy) and [printpdf](https://github.com/fschutt/printpdf).
-
-> :warning: This library is a prototype so we don't recommend using it in production.
-
-## Usage
-
-```rust main.rs
-use std::{
-    fs::{File},
-    io::BufWriter,
-};
+use std::{fs::File, io::BufWriter};
 
 use markup_pdf_rs::{assets::Assets, document::Document, dom, style::Style};
 use taffy::{
@@ -24,15 +10,10 @@ use taffy::{
 };
 
 fn main() {
-    // Define styles like CSS used by XML.
     let mut assets = Assets::default();
     assets.styles.add(
-        // Specify the name of the style
-        // You can use this style by setting the `style` attribute to an element
-        // e.g. `<Layer style="page" />`
         "page",
         Style {
-            // These styles are basically the same as taffy.
             size: Size {
                 width: Points(210.0),
                 height: Points(297.0),
@@ -99,15 +80,11 @@ fn main() {
         },
     );
 
-    // Define fonts
     assets.fonts.add(
-        // You can use this font by setting the `font-family` property to a style
-        // The name of `default` means the default font if `font-family` is not specified
         "default",
         include_bytes!("assets/fonts/Roboto-Regular.ttf").as_slice(),
     );
 
-    // Pass a XML string to `dom::parse`.
     let root = dom::parse(r#"
         <Document title="recipe">
             <Page style="page">
@@ -125,60 +102,8 @@ fn main() {
         </Document>
     "#).unwrap();
 
-    // Build `PdfDocumentReference` (this struct is in printpdf) by passing a XML and assets.
-    let doc = Document::new(&root, assets)
-        .unwrap()
-        .build()
-        .unwrap();
+    let doc = Document::new(&root, assets).unwrap().build().unwrap();
 
-    // Call the `save` to export a PDF.
     let buf = &mut BufWriter::new(File::create("dist/simple.pdf").unwrap());
     doc.save(buf).unwrap();
 }
-```
-
-The code above will make a PDF like below.
-
-|Result|
-| ---- |
-|<img src=".github/simple.png" width="200" /> |
-
-
-## Try with examples
-
-You can try this library by running example codes included in the repository.
-
-```sh
-# Clone this repository.
-$ git clone git@github.com:ktmouk/markup-pdf-rs.git
-$ cd markup-pdf-rs
-
-# Download some fonts from Google Fonts and put them on the `examples/assets/fonts/` dir.
-$ ./examples/assets/fonts/install.sh
-
-# Try some example codes that make a PDF file.
-# PDF files will be made in the `dist/` dir.
-$ cargo run --example recipe
-$ cargo run --example resume
-```
-
-## Examples
-
-|Simple|Nikujaga Recipe (JP)|Japanese Resume (JP)|
-| ---- | ---- | ---- |
-| <img src=".github/simple.png" width="200" />| <img src=".github/recipe.png" width="200" /> | <img src=".github/resume.png" width="200" /> |
-|[Code](examples/simple.rs)|[Code](examples/recipe.rs)|[Code](examples/resume.rs)|
-
-## Elements
-
-|Name|Usage|
-| ---- | ---- |
-|`<Document>`|XML must start with this element. It can have only `<Page>` elements as children.|
-|`<Page>`|This element means one page of PDF. It should have a fixed size defined in the style to determined the page size. It can have `<Layer>` and `<Text>` elements as children.|
-|`<Layer>`|This element is like `<div>` of HTML. You can use it for setting the styles. It can have `<Layer>` and `<Text>` elements as children.|
-|`<Text>`|You can use this element to write texts. It can have only string as a child. :warning: Currently, this element doesn't support calculating the width and height basing on the text automatically, so you need to specify the width and height by hand.|
-
-## Styles
-Styles are basically the same as [taffy](https://github.com/DioxusLabs/taffy) apart from some of property for specifying colors.
-You can check the [style.rs](src/style.rs).
-
