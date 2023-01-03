@@ -1,7 +1,7 @@
 # markup-pdf-rs
 
-The Rust library for making a PDF files by writing kind of HTML/CSS.
-Inspired by [Satori](https://github.com/vercel/satori) and [React-pdf](https://react-pdf.org/). 
+The Rust library for making a PDF files by writing kind of like HTML and CSS.
+Inspired by [Satori](https://github.com/vercel/satori) and [React-pdf](https://github.com/diegomura/react-pdf). 
 This library makes a PDF file with [taffy](https://github.com/DioxusLabs/taffy) and [printpdf](https://github.com/fschutt/printpdf).
 
 > :warning: This library is a prototype so we don't recommend using it in production.
